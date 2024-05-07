@@ -1,0 +1,30 @@
+/*!******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/slyles.css ***!
+  \******************************************************************/
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/slyles.css (1) ***!
+  \**********************************************************************/
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/slyles.css (2) ***!
+  \**********************************************************************/
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/slyles.css (3) ***!
+  \**********************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/styles.scss ***!
+  \***************************************************************************************************************/@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&display=swap);
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/styles.scss (1) ***!
+  \*******************************************************************************************************************/@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap);
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/styles.scss (2) ***!
+  \*******************************************************************************************************************/@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap);
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/styles.scss (3) ***!
+  \*******************************************************************************************************************/@import url(https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Montserrat&display=swap);
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/slyles.css (4) ***!
+  \**********************************************************************/*,:after,:before{border:0;box-sizing:border-box;margin:0;padding:0}li,ol,ul{list-style:none}a{text-decoration:none}img{vertical-align:top}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}body,html{background-color:#fff;width:100%}.banner,.header{font-family:Montserrat,sans-serif}.nav{display:flex;flex-wrap:nowrap;justify-content:space-between;margin:56px auto 48px;width:1120px}.nav__logo{cursor:pointer;font-size:24px;font-weight:700}.nav__links{align-items:center;display:flex;flex-wrap:nowrap;font-size:10px;font-weight:600;gap:40px;max-width:380px;text-transform:uppercase}.nav__link{cursor:pointer}.nav__icons{display:flex;flex-wrap:nowrap;gap:40px;max-width:120px}.nav__icon{cursor:pointer}.banner__slider{align-items:center;display:flex;flex-direction:column;gap:17px}.slider-imgs__img{display:none}.slider-imgs__img,.slider-imgs__img.active{cursor:pointer;z-index:1}.slider-dots__dot{background:#efeef6}.slider-dots__dot,.slider-dots__dot.active{border-radius:50%;cursor:pointer;height:12px;width:12px}.slider-dots__dot.active{background-color:#a49ce4}.slider-imgs{justify-content:center}.slider-dots,.slider-imgs{display:flex;flex-wrap:nowrap}.slider-dots{gap:10px}.banner{margin:0 auto;position:relative;width:1440px}.banner__sticker{font-size:18px;font-weight:700;z-index:100}.banner__sticker--violet{animation:moveRightViolet .5s ease-in-out forwards;background-color:#a49ce4;height:200px;top:80px;width:150px}.banner__sticker--pink,.banner__sticker--violet{box-shadow:10px 10px 20px rgba(0,0,0,.2);left:160px;position:absolute}.banner__sticker--pink{animation:moveRightPink .5s ease-in-out forwards;background-color:#ff8fe6;bottom:90px;height:270px;width:140px}@keyframes moveRightViolet{0%{transform:translateX(0)}to{transform:translateX(1060px)}}@keyframes moveRightPink{0%{transform:translateX(0)}to{transform:translateX(1140px)}}.banner__sticker--violet-text{margin-left:20px;margin-top:100px}.banner__sticker--pink-text{margin-left:20px;margin-top:146px}
+/*!*******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/sass/styles.scss (4) ***!
+  \*******************************************************************************************************************/.nav__logo{color:#1c2a39}.nav__links{color:#5c6a79}.nav__link:hover{color:#1c2a39;font-weight:800}.banner__sticker--pink-text,.banner__sticker--violet-text{color:#1c2a39;text-transform:uppercase}

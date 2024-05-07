@@ -1,0 +1,412 @@
+html,
+body {
+	width: 100%;
+	background-color: $baseBackgroundColor;
+}
+
+.container {
+   max-width: 1440px;
+	margin: 0 auto;
+}
+
+.header,
+.banner {
+	font-family: $font-1;
+}
+
+.header-container {
+	max-width: 1120px;
+	margin: 0 auto;
+}
+
+.nav {
+	margin-top: 48px;
+	margin-bottom: 48px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: nowrap;
+	width: 100%;
+}
+
+	.nav__logo {
+		font-size: 24px;
+		font-weight: 700;
+		cursor: pointer;
+		color: $base-black;
+	}
+	
+
+	.nav__links {
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: 600;
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		width: 40%;
+		gap: 40px;
+		align-items: center;
+
+		.nav__link {
+			cursor: pointer;
+
+			a {
+				color: $base-grey;
+			}
+
+			a:hover {
+				font-weight: 800;
+				color: $base-black;
+			}
+		}
+	}
+
+	.nav__icons {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 35px;
+
+
+		.nav__icon {
+			cursor: pointer;
+		}
+	}
+
+
+
+@mixin banner-sticker($position, $width, $height, $background-color, $box-shadow, $animation, $text-style) {
+	position: absolute;
+
+	@each $key, $value in $position {
+		#{$key}: $value;
+	}
+
+	width: $width;
+	height: $height;
+	background-color: $background-color;
+	box-shadow: $box-shadow;
+	animation: $animation;
+
+	&-text {
+		margin-top: map-get($text-style, margin-top);
+		margin-left: map-get($text-style, margin-left);
+		color: map-get($text-style, color);
+		text-transform: map-get($text-style, text-transform);
+	}
+
+	&:hover {
+		box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+	}
+}
+
+.banner {
+
+	.banner__sticker {
+		font-size: 18px;
+		font-weight: 700;
+		z-index: 100;
+		position: relative;
+
+		&--violet {
+			@include banner-sticker((left: 150px, top: 80px),
+				150px, 200px,
+				$background-sticker1,
+				10px 10px 20px rgba(0, 0, 0, 0.2),
+				moveRightViolet 0.7s ease-in-out forwards,
+				(margin-top: 100px,
+					margin-left: 20px,
+					color: $base-black,
+					text-transform: uppercase));
+		}
+
+		&--pink {
+			@include banner-sticker((left: 160px, top: 350px),
+				140px, 270px,
+				$background-sticker2,
+				10px 10px 20px rgba(0, 0, 0, 0.2),
+				moveRightPink 0.7s ease-in-out forwards,
+				(margin-top: 146px,
+					margin-left: 20px,
+					color: $base-black,
+					text-transform: uppercase));
+		}
+	}
+
+	.banner__slider {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 17px;
+		max-width: 100%;
+
+		.slider-imgs {
+			max-width: 100%;
+		
+		.slider-imgs__img {
+			max-width: 100%;
+			cursor: pointer;
+			display: none;
+			z-index: 1;
+
+			&.active {
+				cursor: pointer;
+				z-index: 1;
+			}
+		}
+	}
+
+		.slider-dots__dot {
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			background: #EFEEF6;
+			cursor: pointer;
+
+			&.active {
+				background-color: #a49ce4;
+			}
+		}
+
+		.slider-dots {
+			display: flex;
+			flex-wrap: nowrap;
+			gap: 10px;
+		}
+	}
+}
+
+@keyframes moveRightViolet {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(1060px);
+	}
+}
+
+@keyframes moveRightPink {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(1140px);
+	}
+}
+
+.main {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+@mixin text-styles($font-family, $color) {
+	font-family: $font-family;
+	color: $color;
+}
+
+.main-container {
+	display: flex;
+	flex-wrap: nowrap;
+	max-width: 1440px;
+	margin: 0 auto;
+	height: 100%;
+}
+	.sidebar__categories-list {
+		width: 416px;
+		min-width: 186px;
+		height: 710px;
+		background-color: $background-sidebar;
+		margin-top: 105px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: left;
+		@include text-styles($font-2, $base-grey);
+		font-size: 12px;
+		font-weight: 500;
+		gap: 10px;
+		align-items: flex-start;
+		padding-left: 163px;
+
+		cursor: pointer;
+		padding-top: 30px;
+
+		li {
+			height: 30px;
+			display: flex;
+			align-items: center;
+
+			&.active {
+				font-weight: 700;
+				font-size: 16px;
+				color: $base-black;
+
+				&::before {
+					content: "•";
+					color: #756AD3;
+					margin-right: 8px;
+					margin-right: 8px;
+					margin-bottom: 4px;
+					margin-left: -15px;
+					font-size: 24px;
+				}
+			}
+			
+			&:hover {
+				background-color: $baseBackgroundColor;
+			}
+	}
+}
+
+.books-section {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 1076px;
+	margin-top: 151px;
+	margin-left: -70px;
+}
+
+	.book {
+		display: flex;
+		flex-wrap: wrap;
+		width: 424px;
+		height: 300px;
+		margin-right: 7%;
+		margin-bottom: 50px;
+	}
+
+		.book-block__cover {
+			width: 50%;
+			height: 100%;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+			}
+		}
+
+		.book-block__info {
+			width: 50%;
+			height: 100%;
+			padding-top: 20px;
+			padding-left: 36px;
+			position: relative;
+
+			.book-block__autor {
+				@include text-styles($font-2, $base-grey);
+				font-size: $baseFontSize1;
+				margin-bottom: 4px;
+			}
+			
+			.book-block__book-name {
+				@include text-styles($font-1, $base-black);
+				font-size: $baseFontSize2;
+				font-weight: 600;
+				margin-bottom: 4px;
+			}
+			
+			.book-block__rating-info {
+				display: flex;
+				color: $base-grey;
+				font-family: $font-2;
+				font-size: $baseFontSize1;
+				gap: 3px;
+				margin-bottom: 10px;
+				margin-top: 10px;
+			}
+			
+			.book-block__views {
+				@include text-styles($font-2, $base-grey);
+				font-size: $baseFontSize1;
+			}
+
+			.book-block__book-description {
+				font-size: $baseFontSize1;
+				margin-bottom: 16px;
+				@include text-styles($font-2, $base-grey);
+			}
+
+			.book-block__price {
+				color: $base-black;
+				font-size: $baseFontSize1;
+				font-family: $font-1;
+				margin-bottom: 16px;
+				font-weight: 600;
+			}
+	}
+
+@mixin button-styles {
+	font-family: $font-1;
+	color: $base-btn-colour;
+	border: 1px solid $base-btn-colour;
+
+	&:hover {
+		background-color: rgb(247, 247, 247);
+	}
+}
+
+.book-block__btn,
+.load-more__btn {
+	@include button-styles;
+	font-size: 0.5em;
+	font-weight: 700;
+	width: 169px;
+	height: 52px;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color: $baseBackgroundColor;
+}
+
+
+.book-block__btn {
+	position: absolute;
+	bottom: 20px;
+}
+
+.btn-block {
+	max-width: 1440px;
+	display: flex;
+	justify-content: center;
+}
+
+.load-more__btn {
+	margin-left: 100px;
+	margin-bottom: 100px;
+}
+
+.star {
+	fill: rgba(209, 209, 209, 0.723); 
+	width: 15px; 
+   height: 15px;
+}
+
+.star-active {
+	fill: gold; 
+}
+
+.nav__icon-cart {
+	cursor: pointer;
+
+	.nav__icon-cart-badge {
+		display: none;
+		transform: translate(30%, -100%); 
+		background-color: #FF353A;
+		color: white;
+		border-radius: 50%;
+		width: 13px;
+		height: 13px;
+		font-size: 10px;
+		padding-left: 3px;
+		cursor: pointer;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+
+
+
